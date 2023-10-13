@@ -11,7 +11,7 @@ It also accepts different arguments for letting the user:
 - decide how the grouping is done,
 - choose what information should be shown,
 - search for specific names or/and extensions 
-- show the subcategories
+- show the subdirectories
 
 The main categories are:
 - PDFs
