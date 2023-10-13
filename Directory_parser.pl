@@ -128,7 +128,7 @@ sub ext_group_files {
     # Store all the extensions.
     my @extensions;
     for my $file (@$files) {
-        if ($file =~ /.+\.(.+)/){
+        if ($file =~ /.+\.(.+)$/){
             push(@extensions, $1);
         }
     }
@@ -139,7 +139,7 @@ sub ext_group_files {
     # Print each extension (uppercase) and its files
     for my $extension (@extensions){
 
-        my @group_files = grep{/^.+\.$extension/} @$files;
+        my @group_files = grep{/^.+\.$extension$/} @$files;
         print("\n----- " . uc $extension . " -----\n");
         print_length(\@group_files);
 
@@ -332,7 +332,7 @@ sub usage {
 No directory given. 
 It is obligatory to declare the directory. 
 
-Example usage: perl Directory_scrapper.pl -d ~/Documents/ -r
+Example usage: perl Directory_scrapper.pl -d ~/Documents/ 
 
 Press perl Directory_scrapper.pl --help for help. 
 USAGE
