@@ -48,7 +48,7 @@ The arguments which can be given are:
 Run `perl Directory_parser.pl --help` for more help. 
 
 #### Example usages
-`perl Directory_parser.pl -d ~/Documents/Test`
+`perl Directory_parser.pl -d ~/Documents/Example`
 
 ![](./images/Example1.png)
 
