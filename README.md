@@ -65,7 +65,7 @@ Run `perl Directory_parser.pl --help` for more help.
 ### Before The First Run
 ---
 
-Some categories take their extensions from the `txt` files included in the `txt_files` directory.
+Some categories take their extensions from the .txt files included in the `txt_files` directory.
 
 There are two ways to have these files:
 
