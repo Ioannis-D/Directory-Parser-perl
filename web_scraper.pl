@@ -1,3 +1,10 @@
+#!/usr/bin/env perl
+
+# A web-scraper that completes the Directory_parser.pl program (github.com/Ioannis-D/Directory-Parser-perl).
+# The script downloads file extensions for different file categories stored in .txt files.
+
+# Created by: Ioannis Doganos | https://github.com/Ioannis-D
+
 use strict;
 use warnings;
 
@@ -23,7 +30,7 @@ my %webpages = (
                 'Video' => 'movie-video-multimedia-files',
             );
 
-# Create the 'txt_files' directory where the txt files will be stored.
+# Create the 'txt_files' directory where the txt files will be stored
 mkdir './txt_files/';
 
 # Parse through every extension
@@ -42,10 +49,10 @@ while (my ($name, $page) = each %webpages) {
     
     my $content = $response->decoded_content();
     
-    # Extract only the extensions and store them in @extensions.
+    # Extract only the extensions and store them in @extensions
     my @extensions = $content =~ m|<strong class="color3">(.+?)</strong>|sig;
 
-    #Write the text file with the extensions separated by | (in order to be used as a regex in the Directory_scrapper.pl)
+    # Write the text file with the extensions separated by | (in order to be used as a regex in the Directory_parser.pl)
     open(FH, '>', $name) or die $!;
     foreach my $extension (@extensions) {
         print FH $extension . '|';
