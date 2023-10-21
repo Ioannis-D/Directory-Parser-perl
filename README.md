@@ -69,7 +69,7 @@ Some categories take their extensions from the `txt` files included in the `txt_
 
 There are two ways to have these files:
 
-1. (Suggested) Download the `web_scrapper.pl` at the same directory you have downloaded the `Directory_parser.pl` and run it (`perl web_scrapper.pl`). This will automatically create a `txt_files` directory and inside it the necessary .txt files.
+1. (Suggested) Download the `web_scraper.pl` at the same directory you have downloaded the `Directory_parser.pl` and run it (`perl web_scraper.pl`). This will automatically create a `txt_files` directory and inside it the necessary .txt files.
 
     Make sure you have the [LWP::UserAgent](https://metacpan.org/release/RSE/lcwa-1.0.0/view/lib/lwp/lib/LWP/UserAgent.pm) and [IO::Socket::SSL](https://metacpan.org/pod/IO::Socket::SSL) installed. If you face an error try to run the program with admin/sudo privileges.
     
