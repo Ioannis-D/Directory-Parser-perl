@@ -69,12 +69,14 @@ Some categories take their extensions from the `txt` files included in the `txt_
 
 There are two ways to have these files:
 
-1. Create a `txt_files` directory in the same directory you have the `Directory_parser.pl` and download all the `txt` files included in my `txt_files` directory or
+1. (Suggested) Download the `web_scrapper.pl` at the same directory you have downloaded the `Directory_parser.pl` and run it (`perl web_scrapper.pl`). This will automatically create a `txt_files` directory and inside it the necessary .txt files.
 
-2.  Download the `webpages` directory and the `file_extensions_parser.pl` and run it. This will create the `txt_files` directory and the `txt` files so after the first run you can delete the `webpages` and the `file_extensions_parser.pl`.
+    Make sure you have the [LWP::UserAgent](https://metacpan.org/release/RSE/lcwa-1.0.0/view/lib/lwp/lib/LWP/UserAgent.pm) and [IO::Socket::SSL](https://metacpan.org/pod/IO::Socket::SSL) installed. If you face an error try to run the program with admin/sudo privileges.
+    
+    If the error consists or the files created are empty, move to the second option and please send me a message because the most possible reason is that [File-Extensions.org](https://www.file-extensions.org/) has changed their website's structure and I have to update the webparser.
+
+2. If the first way does not work, create a `txt_files` directory in the same directory you have the `Directory_parser.pl` and download all the `txt` files included in my `txt_files` directory. 
 
 ### FUTURE LINES
 ---
 If I will have time in the near future, I will create subcategories that can group programming scripts by their programming language.
-
-For the moment, it only works with UNIX systems and maybe support for Windows will be added in the future.
