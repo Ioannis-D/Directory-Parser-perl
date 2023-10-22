@@ -36,7 +36,7 @@ mkdir './txt_files/';
 # Parse through every extension
 while (my ($name, $page) = each %webpages) {
     $name = './txt_files/' . $name . '.txt'; # Create the txt file path and name
-    $url = 'https://www.file-extensions.org/filetype/extension/name/' . $page; # Create the real url
+    my $url = 'https://www.file-extensions.org/filetype/extension/name/' . $page; # Create the real url
 
     # Make the request and read the content of the page
     my $request = new HTTP::Request('GET', $url);
