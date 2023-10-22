@@ -38,6 +38,8 @@ while (my ($name, $page) = each %webpages) {
     $name = './txt_files/' . $name . '.txt'; # Create the txt file path and name
     my $url = 'https://www.file-extensions.org/filetype/extension/name/' . $page; # Create the real url
 
+    print("\nCreating the $name extensions");
+
     # Make the request and read the content of the page
     my $request = new HTTP::Request('GET', $url);
     
@@ -58,6 +60,8 @@ while (my ($name, $page) = each %webpages) {
         print FH $extension . '|';
     }
     close(FH);
+    print("\n$name was created\n");
 }
 
-print("Completed")
+print("\nCompleted\n\n");
+print("You can now use the Directory_parser.pl\n");
